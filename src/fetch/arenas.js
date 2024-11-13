@@ -1,4 +1,4 @@
-const API_URL = "https://backend-plum-psi.vercel.app/";
+const API_URL = "https://backend-plum-psi.vercel.app";
 
 const fetchArenas = async () => {
   try {
