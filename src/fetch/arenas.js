@@ -1,4 +1,4 @@
-const API_URL = "https://green-bean-backend.vercel.app";
+const API_URL = "https://green-bean-backend.vercel.app/api";
 
 const fetchArenas = async () => {
   try {
