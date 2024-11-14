@@ -6,7 +6,7 @@ const initialState = {
         location: '',
         address: '',
         type: '',
-        rate: [],
+        rate: [0, 10000],
         rating: ''
     },
     applied: false,
@@ -26,7 +26,7 @@ export const filterSlice = createSlice({
                 location: '',
                 address: '',
                 type: '',
-                rate: [],
+                rate: [0, 10000],
                 rating: ''
             }
             state.applied = false
