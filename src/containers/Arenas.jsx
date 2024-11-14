@@ -99,8 +99,20 @@ const Arenas = () => {
                 });
             });
         }else{
-            setFilteredArenas(initialdata)
-            setArenas(initialdata)
+            const getArenas = async () => {
+                try {
+                    const data = await fetchArenas();
+                    setArenas(data);
+                    setFilteredArenas(data);
+                    dispatch(setInitialdata(data))
+                } catch (error) {
+                    setError(error.message);
+                } finally {
+                    setLoading(false);
+                }
+            };
+            getArenas();
+            
         }
        
     }, [filterapplied]);
