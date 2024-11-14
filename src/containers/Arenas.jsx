@@ -64,7 +64,7 @@ const Arenas = () => {
 
     useEffect(() => {
         console.log("called", filterapplied, initialdata)
-        if(Object.values(filters).length > 0){
+        if(filterapplied){
             setFilteredArenas(() => {
                 return arenas.filter((arena) => {
                     const matchesLocation = filters?.location

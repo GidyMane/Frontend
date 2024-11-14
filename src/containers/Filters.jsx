@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearFilterstate, handleApplied, handleFilterState } from '../store/FilterSlice'
+import { ListFilter } from "lucide-react"
 
 export default function FilteringComponent() {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
@@ -51,7 +52,7 @@ export default function FilteringComponent() {
         transition={{ duration: 0.3 }}
       >
         <span className="text-xl font-bold">
-          {isFilterOpen ? '✕' : '🔍'}
+          {isFilterOpen ? '✕' : <ListFilter className="w-6 h-6 text--blue-500" />}
         </span>
       </motion.button>
 
